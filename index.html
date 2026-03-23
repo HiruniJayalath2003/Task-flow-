@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Flow</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100 p-10">
+    <div class="min-h-screen lg:grid lg:grid-cols-[250px_1fr]">
+        <!--slide bar-->
+        <div class="slidbar border-r hidden lg:flex lg:flex-col">
+            <div class="flex items-center px-6 py-5 gap-2 border-b ">
+                <div class=" h-8 w-8 rounded-lg flex items-center justify-center">
+                    <svg class="h-8 w-8  border rounded-md bg-black text-gray-200 p-1.5 " fill="none"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                    </svg>
+                </div>
+                <span class="text-lg font-bold ">Project Flow</span>
+            </div>
+            <div class="slid-content flex-col  items-center px-6 py-5 ">
+                <nav class="flex flex-col gap-1 px-2">
+                    <a href="#" class="flex items-center gap-3 rounded-md bg-blue-100 px-3 py-2 text-sm font-medium ">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z">
+                            </path>
+                        </svg>
+                        Dashboard
+                    </a>
+                    <a href="#" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm  hover:bg-blue-100 ">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z">
+                            </path>
+                        </svg>
+                        Settings
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <!--mobile menu-->
+        <div class=" relative lg:hidden">
+            <button id="sidebar-toggle" class="rounded-md p-1.5  hover:bg-gray-100">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                </svg>
+            </button>
+            <div class="dropdown hidden absolute left-0 mt-1 w-56 py-2 shadow-lg bg-white">
+                <nav class="flex flex-col gap-1 px-2">
+                    <a href="#" class="flex items-center gap-3 rounded-md  px-3 py-2 text-sm font-medium bg-blue-100 ">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z">
+                            </path>
+                        </svg>
+                        Dashboard
+                    </a>
+                    <a href="#"
+                        class="flex items-center gap-3 rounded-md px-3 py-2 text-sm  hover:bg-blue-100  transition-colors">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z">
+                            </path>
+                        </svg>
+                        Settings
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <!--main section-->
+        <main class="flex flex-col min-h-screen">
+            <div class="flex-1 p-4 lg:p-6 space-y-6">
+                <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                    <div class="flex items-center gap-3">
+                        <!--Header-->
+                        <div>
+                            <h1 class="text-2xl font-bold t">Dashboard</h1>
+                            <p class="text-sm ">Track and manage your project tasks.</p>
+                        </div>
+                    </div>
+                    <button id="addtask"
+                        class="sm:mt-0  px-4 py-2 text-sm font-medium  text-gray-200 bg-black hover:bg-gray-600 ">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+                        </svg>
+                        Add Task
+                    </button>
+                </div>
+                <!--cards-->
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+                    <!-- Card 1 -->
+                    <div class="cards">
+                        <div class="flex items-center justify-between">
+                            <p class="text-sm text-gray-500 font-medium ">Total Tasks</p>
+                            <svg class="h-4 w-4  text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="mt-2 text-3xl font-bold" id="total">0</p>
+                        <p class="mt-1 text-xs ">+2 from last week</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="cards">
+                        <div class="flex items-center justify-between">
+                            <p class="text-sm text-gray-500 font-medium ">In Progress</p>
+                            <svg class="h-4 w-4  text-orange-400" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <p class="mt-2 text-3xl font-bold" id="progress">0</p>
+                        <p class="mt-1 text-xs ">3 due this week</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="cards">
+                        <div class="flex items-center justify-between">
+                            <p class="text-sm text-gray-500 font-medium ">Completed</p>
+                            <svg class="h-4 w-4  text-green-600" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <p class="mt-2 text-3xl font-bold" id="completed">0</p>
+                        <p class="mt-1 text-xs ">67% completion rate</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="cards">
+                        <div class="flex items-center justify-between">
+                            <p class="text-sm text-gray-500 font-medium ">Overdue</p>
+                            <svg class="h-4 w-4  text-red-600" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="mt-2 text-3xl font-bold" id="overdue">0</p>
+                        <p class="mt-1 text-xs text-red-600">Needs attention</p>
+                    </div>
+                </div>
+
+                <!-- tasks -->
+                <section>
+                    <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
+                        <h2 class="text-lg font-semibold">Tasks</h2>
+                        <div class="flex items-center gap-2">
+                            <!-- Search -->
+                            <div class="relative">
+                                <svg class="absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500"
+                                    fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z">
+                                    </path>
+                                </svg>
+                                <input type="text" id="search" placeholder="Search tasks"
+                                    class="w-full  py-1.5 pl-9 pr-3 text-sm placeholder:text-gray-400 focus:outline-none ">
+                            </div>
+                            <!-- Sort -->
+                            <div class="relative">
+                                <button id="sortButton"
+                                    class=" rounded-md border text-gray-500 px-3 py-1.5 text-sm text-gray-500 hover:bg-indigo-100 ">
+                                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5">
+                                        </path>
+                                    </svg>
+                                    Sort
+                                </button>
+                                <div id="dropdown-menu"
+                                    class="hidden dropdown-menu bg-white absolute right-0 mt-1 w-40 rounded-md border py-1 shadow-lg">
+                                    <button class="sortOption w-full px-3 py-1.5 text-left text-sm hover:bg-gray-200 "
+                                        data-sort="date">Date</button>
+                                    <button class="sortOption w-full px-3 py-1.5 text-left text-sm hover:bg-gray-200"
+                                        data-sort="priority">Priority</button>
+                                    <button class="sortOption w-full px-3 py-1.5 text-left text-sm hover:bg-gray-200"
+                                        data-sort="name">Name</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tabs -->
+                <div class="task-bar flex gap-1 border-b mb-4">
+                    <button class="tab-btn active px-4 py-2 text-sm font-medium border-b-2 " data-tab="all">All</button>
+                    <button class="tab-btn  px-4 py-2 text-sm font-medium text-gray-600 hover:text-black "
+                        data-tab="todo">To Do</button>
+                    <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-600 hover:text-black "
+                        data-tab="in-progress">In Progress</button>
+                    <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-600 hover:text-black "
+                        data-tab="completed">Completed</button>
+                </div>
+                <div id="task-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"></div>
+
+                <section>
+                    <h2 class="text-lg font-semibold mb-4 p-5">Frequently Asked Questions</h2>
+                    <div class="space-y-2">
+                        <!-- Q1 -->
+                        <div class="question rounded-lg border ">
+                            <button
+                                class="question-btn flex w-full items-center justify-between px-4 py-3 text-sm font-medium text-left hover:bg-indigo-200 rounded-lg">
+                                <span>How do I create a new task?</span>
+                                <svg class="question-img h-4 w-4  transition-transform duration-300" fill="none"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                </svg>
+                            </button>
+                            <div class="content hidden">
+                                <p class="px-4 pb-3 text-sm text-gray-600">Click the "Add Task" button
+                                    at
+                                    the
+                                    top of the dashboard. Fill in the task name, description, priority,
+                                    and status,
+                                    then
+                                    click "Create Task" to add it to your board.</p>
+                            </div>
+                        </div>
+                        <!-- Q2 -->
+                        <div class="question rounded-lg border">
+                            <button
+                                class="question-btn flex w-full items-center justify-between px-4 py-3 text-sm font-medium text-left hover:bg-indigo-200 rounded-lg">
+                                <span>Can I filter tasks by status?</span>
+                                <svg class="question-img h-4 w-4  transition-transform duration-300" fill="none"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                </svg>
+                            </button>
+                            <div class="content hidden">
+                                <p class="px-4 pb-3 text-sm text-gray-600 ">Yes! Use the tab bar above
+                                    the
+                                    task
+                                    grid. You can switch between "All", "In Progress", "Completed", and
+                                    "To Do" to
+                                    filter your task view instantly.</p>
+                            </div>
+                        </div>
+                        <!-- Q 3 -->
+                        <div class="question rounded-lg border ">
+                            <button
+                                class="question-btn flex w-full items-center justify-between px-4 py-3 text-sm font-medium text-left hover:bg-indigo-200 rounded-lg">
+                                <span>How do I sort my tasks?</span>
+                                <svg class="question-img h-4 w-4  transition-transform duration-300" fill="none"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                </svg>
+                            </button>
+                            <div class="content hidden">
+                                <p class="px-4 pb-3 text-sm text-gray-600 ">Click the "Sort" button next
+                                    to
+                                    the
+                                    Tasks heading. You can sort by date, priority, or name. The sort
+                                    applies to
+                                    whichever tab you currently have selected.</p>
+                            </div>
+                        </div>
+                        <!-- Q 4 -->
+                        <div class="question rounded-lg border ">
+                            <button
+                                class="question-btn flex w-full items-center justify-between px-4 py-3 text-sm font-medium text-left hover:bg-indigo-200 rounded-lg">
+                                <span>What do the priority badges mean?</span>
+                                <svg class="question-img h-4 w-4  transition-transform duration-300" fill="none"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                </svg>
+                            </button>
+                            <div class="content hidden">
+                                <p class="px-4 pb-3 text-sm  text-gray-600">Tasks are color-coded by
+                                    urgency.
+                                    <strong>High</strong> (red) tasks need immediate attention,
+                                    <strong>Medium</strong>
+                                    (yellow) tasks should be tackled soon, and <strong>Low</strong>
+                                    (green) tasks
+                                    can be
+                                    done when convenient.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!--footer -->
+            <footer class="border-t text-gray-600  px-6 py-4">
+                <div class="flex flex-col items-center justify-between gap-2 sm:flex-row">
+                    <p class="text-xs ">Built with HTML, Tailwind CSS & JavaScript —
+                        STEMLink
+                        SEP</p>
+                    <p class="text-xs ">Project Flow © 2026</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <!-- Task Form  -->
+    <div id="addTask-form" class="hidden fixed inset-0 bg-black/40 flex items-center justify-center  z-50">
+        <div class="bg-white p-6 rounded-lg w-[300px]  shadow-lg ">
+
+            <div class="flex gap-1 justify-between">
+                <h2 class="text-lg font-bold mb-4">Create New Task</h2>
+                <button id="close">
+                    <svg class="formClose h-5 w-5 bg-gray-300 text-gray-600 hover:bg-gray-100 rounded-md" fill="none"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <p class="text-xs text-gray-400 pb-1">Fill in the details below to add a task.</p>
+
+            <form id="taskForm" class="space-y-7">
+                <label for="task name">Task Name</label>
+                <input type="text" id="taskName" placeholder="ex:Building login page"
+                    class="w-full border px-3 py-2 text-sm rounded" required>
+
+                <label for="description">Description</label>
+                <input type="text" id="taskDescription" placeholder="Describe the task..."
+                    class="w-full border px-3 py-2 text-sm rounded" required>
+
+                <div class="inline-flex gap-5 justify-between">
+                    <div class="flex flex-col">
+                        <label for="priority">Prority</label>
+                        <select id="piority" class="h-10 w-28 border px-3 py-2 text-sm rounded">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label for="progress">Progress</label>
+                        <select id="taskStatus" class="h-10 w-30 border px-3 py-2 text-sm rounded">
+                            <option value="todo">To Do</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label for="Due date">Due Date</label>
+                <input type="date" id="dueDate" class="w-full border px-3 py-2 rounded" required>
+                <div class="inline-flex justify-between gap-3">
+                    <button type="submit" id="submit"
+                        class="h-10 w-30 bg-black text-white py-2 rounded hover:bg-gray-800">
+                        Create
+                    </button>
+                    <button type="button" id="cancel"
+                        class="h-10 w-30 bg-gray-200 text-black py-2 border rounded hover:bg-gray-300">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
